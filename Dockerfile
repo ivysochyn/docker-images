@@ -1,10 +1,68 @@
 FROM debian:buster
- 
+
 RUN apt-get update \
     && env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    gawk curl wget git diffstat unzip texinfo gcc build-essential sudo ssh \
-    chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev tar locales zip rsync bc xxd file python     python-pip binutils bzip2 g++ gcc gzip libncurses5-dev libdevmapper-dev libsystemd-dev mercurial whois patch perl vim bison flex libssl-dev libfdt-dev bmake git-lfs libopenblas-dev gfortran lz4 zstd \
-    && apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*                                                                                                                                                                    
+    bc \
+    binutils \
+    bison \
+    bmake \
+    build-essential \
+    bzip2 \
+    chrpath \
+    cpio \
+    curl \
+    debianutils \
+    diffstat \
+    file \
+    flex \
+    g++ \
+    gawk \
+    gcc \
+    gcc \
+    gfortran \
+    git \
+    git-lfs \
+    gzip \
+    iputils-ping \
+    libdevmapper-dev \
+    libegl1-mesa \
+    libfdt-dev \
+    libncurses5-dev \
+    libopenblas-dev \
+    libsdl1.2-dev \
+    libssl-dev \
+    libsystemd-dev \
+    locales \
+    lz4 \
+    mercurial \
+    mesa-common-dev \
+    patch \
+    perl \
+    pylint3 \
+    python \
+    python-pip \
+    python3 \
+    python3-git \
+    python3-jinja2 \
+    python3-pexpect \
+    python3-pip \
+    python3-subunit \
+    rsync \
+    socat \
+    ssh \
+    sudo \
+    tar \
+    texinfo \
+    unzip \
+    vim \
+    wget \
+    whois \
+    xterm \
+    xxd \
+    xz-utils \
+    zip \
+    zstd \
+    && apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo && chmod a+x /usr/bin/repo
 RUN useradd -u 1000 oe-builder

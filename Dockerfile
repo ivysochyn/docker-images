@@ -18,7 +18,6 @@ RUN apt-get update \
     g++ \
     gawk \
     gcc \
-    gcc \
     gfortran \
     git \
     git-lfs \
@@ -27,6 +26,7 @@ RUN apt-get update \
     libdevmapper-dev \
     libegl1-mesa \
     libfdt-dev \
+    liblz4-dev \
     libncurses5-dev \
     libopenblas-dev \
     libsdl1.2-dev \

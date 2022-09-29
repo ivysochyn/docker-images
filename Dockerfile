@@ -62,6 +62,7 @@ RUN apt-get update \
     xz-utils \
     zip \
     zstd \
+    screen \
     && apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo && chmod a+x /usr/bin/repo
